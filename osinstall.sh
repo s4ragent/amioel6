@@ -45,10 +45,8 @@ title CentOS6.5
 EOS
 
 
-chroot /mnt
-ln -s /boot/grub/menu.lst /boot/grub/grub.conf
-ln -s /boot/grub/grub.conf /etc/grub.conf
-exit
+chroot /mnt /bin/bash -c "ln -s /boot/grub/menu.lst /boot/grub/grub.conf;ln -s /boot/grub/grub.conf /etc/grub.conf"
+
 
 cat <<EOF | chroot /mnt grub --batch
 device (hd0) /dev/xvdf
@@ -122,15 +120,11 @@ perl -p -i -e 's,^#UseDNS yes,UseDNS no,' etc/ssh/sshd_config
 perl -p -i -e 's,^PasswordAuthentication yes,PasswordAuthentication no,' etc/ssh/sshd_config
 sed -i "s/enforcing/disabled/" /mnt/etc/sysconfig/selinux
 
-chroot /mnt
-rpm -vv --rebuilddb
-touch .autorelabel
-exit;
+chroot /mnt /bin/bash -c "rpm -vv --rebuilddb;touch .autorelabel"
 
 sync;sync;sync;
 cd
 umount /mnt/proc
 umount /mnt
-exit;
-exit;
+
 
