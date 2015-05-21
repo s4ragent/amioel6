@@ -20,7 +20,6 @@ On worker instance
     git clone http://github.com/s4ragent/amioel6
     cd amioel6
     bash osinstall.sh
-    exit;
 
 On IAM role instance
 
