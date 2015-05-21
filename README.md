@@ -5,8 +5,8 @@ On IAM role instance
     
     git clone http://github.com/s4ragent/amioel6
     cd amioel6
-    # you must edit awscli.sh if you don't use oregon region
-    # ami=ami-5a20b86a <<== edit
+    ### if you don't use oregon region,then you must edit awscli.sh
+    ### ami=ami-5a20b86a <<== edit
     bash awscli.sh createbaseinstance
 ==> start worker instance
 
