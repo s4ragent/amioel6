@@ -1,4 +1,4 @@
-sudo su -
+#sudo su
 parted /dev/xvdf --script 'mklabel msdos mkpart primary 1M -1s print quit'
 partprobe /dev/xvdf
 udevadm settle
