@@ -6,12 +6,14 @@ you must edit awscli.sh if you don't use oregon region
 
 
 On IAM role instance
+
     git clone http://github.com/s4ragent/amioel6
     cd amioel6
     bash awscli.sh createbaseinstance
 ==> start worker instance
 
 On worker instance
+
     sudo su -
     yum -y install git
     git clone http://github.com/s4ragent/amioel6
@@ -20,6 +22,7 @@ On worker instance
     exit;
 
 On IAM role instance
+
     cd amioel6
     bash awscli.sh createimage <worker-instance ami-id> /dev/sdf
 ==> create oracle linux 6 AMI(HVM) and you can delete worker instance
