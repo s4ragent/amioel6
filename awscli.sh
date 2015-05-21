@@ -52,7 +52,8 @@ cat > blockdevice.json <<EOF
 ]
 EOF
 
-aws ec2 register-image --root-device-name /dev/xvda --name "Oracle linux6 Latest" --block-device-mappings file://blockdevice.json --virtualization-type hvm --architecture x86_64 --description "Oracle Linux 6 Latest"
+DATE=`date "+%Y%m%d%H%M"`
+aws ec2 register-image --root-device-name /dev/xvda --name "Oracle linux6 Latest $DATE" --block-device-mappings file://blockdevice.json --virtualization-type hvm --architecture x86_64 --description "Oracle Linux 6 Latest"
 rm -rf blockdevice.json
 }
 case "$1" in
