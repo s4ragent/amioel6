@@ -23,7 +23,7 @@ On worker instance
 
 On IAM role instance
 
-    $cd amioel6
-    $bash awscli.sh createimage <worker-instance ami-id> /dev/sdf
+    cd amioel6
+    bash awscli.sh createimage <worker-instance ami-id> /dev/sdf
     Ex) bash awscli.sh createimage i-332da0c4 /dev/sdf
 ==> create oracle linux 6 AMI(HVM) and you can delete worker instance
