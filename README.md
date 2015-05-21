@@ -1,5 +1,5 @@
 # create oracle linux 6 AMI (HVM) on Amazon EC2
-you need IAM role instance 
+you need IAM role instance that installed awscli
 
 On IAM role instance
     
