@@ -1,7 +1,8 @@
 # create oracle linux 6 AMI (HVM) on Amazon EC2
-you need IAM role instance
-you must edit awscli.sh if you don't use oregon region
-    #Amazon Linux AMI 2013.09  change if you don't use oregon reqion
+you need IAM role instance  
+you must edit awscli.sh if you don't use oregon region  
+
+    #Amazon Linux AMI 2013.09  change if you don't use oregon reqion  
     ami=ami-5a20b86a
 
 
