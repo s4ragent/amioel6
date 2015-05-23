@@ -38,7 +38,7 @@ cat > boot/grub/menu.lst <<EOS
 default=0
 timeout=0
 hiddenmenu
-title CentOS6.5
+title OracleLinux6
         root (hd0,0)
         kernel /boot/vmlinuz-$(rpm --root=$PWD -q --queryformat "%{version}-%{release}.%{arch}\n" kernel) ro root=LABEL=/ console=ttyS0 xen_pv_hvm=enable
         initrd /boot/initramfs-$(rpm --root=$PWD -q --queryformat "%{version}-%{release}.%{arch}\n" kernel).img
